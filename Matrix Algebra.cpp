@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
-int display(int arr[20][20],int row,int col);
-void addsub(int arr1[20][20],int arr2[20][20],int row,int col);
-void multi(int arr1[20][20],int arr2[20][20],int row,int col,int col1);
+float display(float arr[20][20],int row,int col);
+void addsub(float arr1[20][20],float arr2[20][20],int row,int col);
+void multi(float arr1[20][20],float arr2[20][20],int row,int col,int col1);
 int main()
 {//Start of main function
-	int mat1[20][20],mat2[20][20],row1,col1,row2,col2;
+	float mat1[20][20],mat2[20][20];
+	int row1,col1,row2,col2;
 	cout<<"\n\t\t\tWELCOME TO MATRIX ALGEBRA ."<<endl<<endl;
 	cout<<"Enter Row for 1st matrix :-  ";
 	cin>>row1;
@@ -39,7 +40,7 @@ int main()
 }//End of main function
 
 
-int display(int arr[20][20],int row,int col)//Function for displaying matrix
+float display(float arr[20][20],int row,int col)//Function for displaying matrix
 { int i,j;
 	for(i=0;i<row;i++)
 	{
@@ -63,7 +64,7 @@ int display(int arr[20][20],int row,int col)//Function for displaying matrix
 }//End of Display function
 
 
-void addsub(int arr1[20][20],int arr2[20][20],int row,int col)//addition function
+void addsub(float arr1[20][20],float arr2[20][20],int row,int col)//addition function
 { 
     cout<<"\n\nAddition of two matrices :- "<<endl;
 	int i,j;
@@ -89,10 +90,10 @@ void addsub(int arr1[20][20],int arr2[20][20],int row,int col)//addition functio
 }//End of addition and subtraction function
 
 
-void multi(int arr1[20][20],int arr2[20][20],int row,int col,int col1)//Multiplication function
+void multi(float arr1[20][20],float arr2[20][20],int row,int col,int col1)//Multiplication function
 { 
     int i,j,k;
-	int multi[20][20];
+	float multi[20][20];
 	cout<<"\n\nMultiplication of matrices :- "<<endl;
 	for(i=0;i<row;i++)
 	{
